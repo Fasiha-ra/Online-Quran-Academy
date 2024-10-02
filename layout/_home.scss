@@ -180,4 +180,218 @@
     }
   }
   //feature end
+  //packages start
+  .packages {
+    text-align: center;
+    margin-bottom: 40px;
+    @media (min-width: 992px) {
+      margin-bottom: 60px;
+    }
+    h2 {
+      margin-bottom: 25px;
+      @media (min-width: 992px) {
+        margin-bottom: 50px;
+      }
+    }
+    .cards {
+      justify-content: center;
+      @include grid(1, 20px);
+      @media (min-width: 576px) {
+        @include grid(2, 20px);
+      }
+      @media (min-width: 768px) {
+        @include grid(3, 20px);
+      }
+      @media (min-width: 992px) {
+        @include grid(4, 20px);
+      }
+      .cardWrap {
+        &:nth-child(2) {
+          @media (min-width: 992px) {
+            margin-top: -10px;
+          }
+          ul {
+            border: 1px solid $primary;
+          }
+        }
+        transition: all 0.3s ease-in;
+        &:hover {
+          transform: translateY(-10px);
+        }
+        .heading {
+          font-size: 18px;
+          line-height: 22px;
+          display: block;
+          margin-bottom: 20px;
+          @media (min-width: 992px) {
+            font-size: 20px;
+            line-height: 24px;
+          }
+        }
+        .card {
+          margin: 0 auto;
+          width: 100%;
+          max-width: 276px;
+          border: 1px solid #ddd;
+          &:hover {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+          }
+          .text {
+            background: $primary;
+            display: block;
+            color: $white;
+            padding: 30px 20px;
+            font-size: 40px;
+            line-height: 44px;
+            sup {
+              font-size: 28px;
+              line-height: 32px;
+            }
+            span {
+              display: block;
+              font-size: 16px;
+              line-height: 20px;
+            }
+          }
+          ul {
+            li {
+              padding: 20px;
+              border-bottom: 1px solid #ddd;
+              font-size: 15px;
+              line-height: 19px;
+            }
+          }
+        }
+      }
+    }
+  }
+  //packages end
+  //online class start
+  .onlineClass {
+    margin-bottom: 40px;
+    @media (min-width: 929px) {
+      margin-bottom: 60px;
+    }
+    .textWrap {
+      @include flex(center, 20px, center);
+      flex-direction: column;
+      font-size: 15px;
+      line-height: 19px;
+      margin-bottom: 15px;
+      @media (min-width: 992px) {
+        flex-direction: row;
+        margin-bottom: 20px;
+      }
+      .text {
+        @media (min-width: 992px) {
+          width: 100%;
+          max-width: 500px;
+        }
+      }
+      img {
+        width: 100%;
+        max-width: 500px;
+      }
+      h3 {
+        margin-bottom: 20px;
+      }
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  //online class end
+  //quranhub start
+  .quranHub {
+    background: $lightGray;
+    padding: 40px 0;
+    margin-bottom: 40px;
+    @media (min-width: 992px) {
+      margin-bottom: 60px;
+    }
+    h2 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .cards {
+      @include grid(1, 20px);
+      justify-content: center;
+      @media (min-width: 768px) {
+        @include grid(2, 20px);
+      }
+      @media (min-width: 992px) {
+        @include grid(3, 20px);
+      }
+      .card {
+        margin: 0 auto;
+        width: 100%;
+        border: 1px solid #ddd;
+        padding: 40px 20px;
+        background-color: $white;
+        @include flex(start, 10px, center);
+        @media (min-width: 768px) {
+          max-width: 400px;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+        .textWrap {
+          font-size: 16px;
+          line-height: 20px;
+          p {
+            margin-bottom: 10px;
+            @media (min-width: 768px) {
+              min-height: 100px;
+            }
+          }
+          .title {
+            font-size: 18px;
+            line-height: 22px;
+            display: block;
+            margin-bottom: 20px;
+            @media (min-width: 992px) {
+              font-size: 24px;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+  //quranhub end
+  //patner start
+  .partners{
+    .imgHolder{
+      text-align: center;
+     @include flex(center,20px, center);
+     flex-wrap: wrap;
+      .rating{
+        width: 100%;
+        max-width: 336px;
+        margin: 0 auto;
+      }
+      .partner{
+        width: 100%;
+        max-width: 160px;
+        min-height: 70px;
+        margin: 0 auto 20px;
+        @media (min-width:992px){
+          max-width: 220px;
+        }
+      }
+      .star{
+        width: 100%;
+        max-width: 100px;
+        min-height: 70px;
+        margin: 0 auto;
+        @media (min-width:992px){
+          max-width: 190px;
+          min-height: 118px;
+        }
+      }
+    }
+  }
+  //partner end
 }
