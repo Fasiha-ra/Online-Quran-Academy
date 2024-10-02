@@ -1,0 +1,183 @@
+@import "../layout/variable";
+@import "../layout/mixin";
+#home {
+  // home start
+  .hero {
+    overflow: hidden;
+    padding-top: 100px;
+    background-image: url("../images/home/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container {
+      color: $white;
+      text-align: center;
+      position: relative;
+      padding: 60px;
+      margin: 0 10px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(10, 10, 10, 0.59);
+      }
+      .heading {
+        position: relative;
+        z-index: 1;
+        p {
+          margin-bottom: 20px;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            background-color: #fff;
+            height: 2px;
+            left: 47%;
+            top: 29px;
+          }
+        }
+        .btns {
+          margin-top: 40px;
+          @include flex(center, 10px, center);
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+  //home end
+  //startLearn start
+  .startLearn {
+    background: $lightGray;
+    padding: 40px 0;
+    margin-bottom: 40px;
+    @media (min-width: 992px) {
+      margin-bottom: 60px;
+    }
+    h2 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .cards {
+      @include grid(1, 20px);
+      justify-content: center;
+      @media (min-width: 768px) {
+        @include grid(2, 20px);
+      }
+      @media (min-width: 992px) {
+        @include grid(3, inherit);
+        justify-content: inherit;
+      }
+      .card {
+        margin: 0 auto;
+        width: 100%;
+        border: 1px solid #ddd;
+        padding: 40px 20px;
+        background-color: $white;
+        @include flex(start, 10px, center);
+        @media (min-width: 768px) {
+          max-width: 400px;
+        }
+        @media (min-width: 992px) {
+          border-right: 1px solid #ddd !important;
+          border: inherit;
+        }
+        img {
+          width: 40px;
+          height: 40px;
+        }
+        .textWrap {
+          font-size: 16px;
+          line-height: 20px;
+          p {
+            margin-bottom: 10px;
+            @media (min-width: 768px) {
+              min-height: 100px;
+            }
+          }
+          .title {
+            font-size: 18px;
+            line-height: 22px;
+            display: block;
+            margin-bottom: 20px;
+            @media (min-width: 992px) {
+              font-size: 24px;
+              line-height: 28px;
+            }
+          }
+          a {
+            font-weight: bold;
+            text-decoration: underline;
+          }
+          .bold {
+            color: #008080;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  //startLearn end
+  //feature start
+  .feature {
+    text-align: center;
+    margin-bottom: 40px;
+    @media (min-width: 992px) {
+      margin-bottom: 60px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .cards {
+      @include grid(1, 20px);
+      justify-content: center;
+      @media (min-width: 768px) {
+        @include grid(2, 20px);
+      }
+      @media (min-width: 992px) {
+        @include grid(3, 20px);
+      }
+      .card {
+        overflow: hidden;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 20px;
+        width: 100%;
+        max-width: 400px;
+        img {
+          width: 100%;
+          max-width: 370px;
+          min-height: 150px;
+          margin-bottom: 15px;
+          transform-origin: center;
+          transform: scale(1);
+          transition: all 0.3s ease;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+        strong {
+          font-size: 18px;
+          line-height: 22px;
+          display: block;
+          margin-bottom: 10px;
+          @media (min-width: 992px) {
+            font-size: 20px;
+            line-height: 24px;
+          }
+        }
+        p {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  //feature end
+}
